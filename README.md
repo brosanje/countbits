@@ -25,6 +25,12 @@ feastoffoo::countbits::improvement3
 feastoffoo::countbits::improvement4
   a fully templated version of improvement3.
 
+unit tests, which have some basic sanity tests, and then sort of profiling
+and extensive testing against the reference.  1 million tests, using a
+uniform random number generator 0 - RAND_MAX, are generated with the
+reference at startup time, and saved in a vector.
+
+
 ```
 [==========] Running 18 tests from 1 test case.
 [----------] Global test environment set-up.
