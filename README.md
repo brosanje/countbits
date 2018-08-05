@@ -19,8 +19,12 @@ feastoffoo::countbits::improvement3
   hold a higher number than the number of bits in the fundamental type.
   once that point is reached, it sums the masked pieces in modulus.
   This is a constant number of steps, mostly dependent on the size of
-  the fundamental type.  2+1 steps for char and 3+1 steps for anything larger.
-  O(c)
+  the fundamental type in an O(log nbits) kind of way, but it stays
+  fixed for a range of sizes.  So 2+1 steps for char and 3+1 steps
+  for anything larger when it tops out at 8 bits for the mask.  8 bits
+  to count the bits allows for numbers with up to 255 bits, and so far the
+  largest integer on typical architectures is 64 bits, 8 bytes.  So, O(c),
+  more or less.
 
 feastoffoo::countbits::improvement4
   a fully templated version of improvement3.
