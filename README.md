@@ -18,7 +18,7 @@ feastoffoo::countbits::improvement3
   uses the mask -> shift -> add algorithm until the masked number can
   hold a higher number than the number of bits in the fundamental type.
   once that point is reached, it sums the masked pieces in modulus.
-  This is a constant number of steps, mostly independent on the size of
+  This is a constant number of steps, mostly dependent on the size of
   the fundamental type.  2+1 steps for char and 3+1 steps for anything larger.
   O(c)
 
